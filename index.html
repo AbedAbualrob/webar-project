@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <!-- Updated Viewport Meta Tag (No max-scale or user-scalable) -->
+    <!-- Viewport Meta Tag for mobile responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Load Three.js first -->
+    <!-- Load Three.js (needed for AR.js and A-Frame) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-    <!-- Then load AR.js -->
+    <!-- Load AR.js (AR library) -->
     <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/three.js/build/ar.js"></script>
 
-    <!-- Optional: A-Frame -->
+    <!-- Optional: A-Frame (for easy 3D rendering and AR integration) -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <title>AR Video Example</title>
   </head>
   <body style="margin: 0; overflow: hidden;">
-    <!-- AR.js scene setup -->
+
+    <!-- AR.js scene -->
     <a-scene embedded arjs>
-      <!-- AR Marker -->
-      <a-marker type="pattern" url="marker.patt">
-        <!-- Video Element (Ensure video.mp4 is in the same folder as index.html) -->
+      
+      <!-- Marker Setup -->
+      <a-marker type="pattern" url="marker.patt"> <!-- Replace "marker.patt" with your marker file path -->
+        <!-- Video displayed on the marker -->
         <a-video src="video.mp4" width="2" height="1" position="0 1 0"></a-video>
       </a-marker>
-      <!-- Camera Entity -->
+      
+      <!-- Camera setup -->
       <a-entity camera></a-entity>
+
     </a-scene>
 
-    <!-- Optional: Debugging console log -->
-    <script>
-      console.log("Check the console for errors or missing files!");
-    </script>
   </body>
 </html>
