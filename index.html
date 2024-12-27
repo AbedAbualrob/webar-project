@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Viewport for mobile scaling -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    
+    <!-- Updated Viewport Meta Tag (No max-scale or user-scalable) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Load Three.js first -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <!-- Then load AR.js -->
     <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/three.js/build/ar.js"></script>
+
+    <!-- Optional: A-Frame -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
     <!-- AR.js scene setup -->
@@ -21,5 +24,10 @@
       <!-- Camera Entity -->
       <a-entity camera></a-entity>
     </a-scene>
+
+    <!-- Optional: Debugging console log -->
+    <script>
+      console.log("Check the console for errors or missing files!");
+    </script>
   </body>
 </html>
