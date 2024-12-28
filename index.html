@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AR.js Video Example</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.7/aframe/build/aframe-ar.js"></script>
+    <meta charset="UTF-8">
+    <title>AR.js Live QR Video</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
-    <!-- AR.js Scene -->
-    <a-scene embedded arjs>
-        <!-- Marker -->
-        <a-marker preset="custom" type="pattern" url="maker.patt">
-            <!-- Video -->
-            <a-video src="video.mp4" width="2" height="1" position="0 1 0"></a-video>
+    <a-scene embedded arjs="sourceType: webcam;">
+        <a-marker type="pattern" url="marker.patt">
+            <a-video src="video.mp4" width="1" height="0.5" position="0 0 0"></a-video>
         </a-marker>
-        <!-- Camera -->
-        <a-entity camera></a-entity>
+        <a-marker-camera></a-marker-camera>
     </a-scene>
 </body>
 </html>
